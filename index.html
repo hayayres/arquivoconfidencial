@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQUIVO CONFIDENCIAL</title>
+
+    <style>
+        body{
+            background-color: #084D6E;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 550px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 45px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: green;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>PERGUNTA URGENTE!</h1>
+
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb21wYjR5Zm82dTUxYnVxa3M4azI3ajl4N3loYzB0eGF2dHB5ZGVsayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7YXVDcHDYRcjuUGfEA/giphy.gif" width="240" height=240" alt="">
+
+        <h2>A Vossa Senhoria, beldade portuguesa, gostaria de ir em um date comigo em um futuro breve?</h2>
+        
+
+        <a href="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWpvdHRjZ2xteHRybHM2cTR4eWJmeGJhd3kzMTBybXVuNTduaHZrZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgKWQeoclWggTDO/giphy.gif" alt=""><button id="sim" > Sim! </button></a>
+        <button onclick="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
